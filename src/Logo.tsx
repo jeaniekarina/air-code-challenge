@@ -4,7 +4,6 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
       aria-label="Company Logo"
       viewBox="0 0 350 144"
       xmlns="http://www.w3.org/2000/svg"
-      className="prefix__ttcgub-0 prefix__chuJgD"
       height="24"
       width="60"
       fill="#142a72"

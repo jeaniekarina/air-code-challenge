@@ -25,13 +25,11 @@ function App() {
           handleChange={setSearchTerm}
         />
 
-        <div className="list-container">
-          <ul className="people-list">
-            {people.map((person) => (
-              <Person key={person.id} person={person} />
-            ))}
-          </ul>
-        </div>
+        <ul className="people-list" aria-label="Search Results">
+          {people.map((person) => (
+            <Person key={person.id} person={person} />
+          ))}
+        </ul>
       </div>
     </div>
   );

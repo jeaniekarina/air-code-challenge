@@ -9,7 +9,7 @@ export const SearchInput = ({ onKeyUp, name, handleChange, value }: Props) => {
   return (
     <div>
       <input
-        aria-label="Person Search Input"
+        aria-label="Search By Person Name"
         className="search-input"
         type="text"
         value={value}

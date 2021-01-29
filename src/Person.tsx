@@ -15,7 +15,12 @@ export const Person = ({ person }: Props) => {
 
       <div className="info-container">
         <h2 className="name">{person.name}</h2>
-        <p className="description">{person.description}</p>
+        <p
+          className="description"
+          aria-label={`Description for person ${person.name}`}
+        >
+          {person.description}
+        </p>
       </div>
     </li>
   );

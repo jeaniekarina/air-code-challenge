@@ -10,7 +10,7 @@ test("renders all 1000 people when page loads", () => {
 
 test("filters results when searching for Cullingford", () => {
   render(<App />);
-  const searchInput = screen.getByLabelText("Person Search Input");
+  const searchInput = screen.getByLabelText("Search By Person Name");
   fireEvent.change(searchInput, { target: { value: "Cullingford" } });
   const people = screen.getAllByLabelText("Person");
   const name = screen.getByText("Dyanna Cullingford");
