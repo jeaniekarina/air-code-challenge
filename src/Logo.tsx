@@ -5,8 +5,8 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => {
       viewBox="0 0 350 144"
       xmlns="http://www.w3.org/2000/svg"
       className="prefix__ttcgub-0 prefix__chuJgD"
-      height="80"
-      width="80"
+      height="24"
+      width="60"
       fill="#142a72"
       {...props}
     >

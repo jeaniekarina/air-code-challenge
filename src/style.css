@@ -1,10 +1,16 @@
 html {
-  --color-primary: #142a72;
+  --color-primary: #102261;
   --color-text: #333333;
+  --color-border: #33dbdb;
 }
 
 body {
   margin: 0;
+}
+
+.header {
+  padding-top: 16px;
+  border-top: 3px solid var(--color-border);
 }
 
 .container {
@@ -22,54 +28,73 @@ body {
   box-sizing: border-box;
   padding-left: 32px;
   padding-right: 32px;
-  max-width: 700px;
+  max-width: 639px;
+}
+
+@media only screen and (min-width: 780px) {
+  .wrapper {
+    margin: 100px auto 0px;
+  }
 }
 
 .title {
-  font-family: Gelica, Georgia, serif;
-  font-feature-settings: "salt", "ss01";
+  font-family: "Georgia", serif;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 1.44px;
   line-height: 1.16;
   color: var(--color-primary);
+  margin: 0 0 28px 0;
 }
 
 @media only screen and (min-width: 780px) {
   .title {
-    font-size: 48px;
+    font-size: 40px;
+    margin: 0 0 48px 0;
   }
 }
 
 .text {
-  margin: 0px;
-  font-family: "Inter", system-ui, -apple-system;
-  font-size: 16px;
+  font-family: "Helvetica";
+  font-size: 14px;
   color: var(--color-text);
-  line-height: 27px;
-  margin-bottom: 30px;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
 }
 
 @media only screen and (min-width: 780px) {
   .text {
-    font-size: 18px;
+    font-size: 16px;
+    margin: 0 0 43px 0;
   }
 }
 
 .search-input {
-  padding: 10px 15px;
+  padding: 0 16px;
   background-color: #f4f4f4;
   border: none;
   border-radius: 4px;
   width: calc(100% - 30px);
-  font-size: 16px;
-  font-family: "Inter", system-ui, -apple-system;
-  color: var(--color-text);
+  font-size: 14px;
+  font-family: "Helvetica";
+  color: "#39393";
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 780px) {
+  .search-input {
+    margin: 0 0 43px 0;
+  }
+}
+
+.search-input::placeholder {
+  color: "#39393";
 }
 
 .people-list {
   padding: 0;
-  margin: 40px 0 0 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -77,48 +102,39 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .person:first-child {
   margin-top: 0;
 }
 
-.person-image-wrapper {
-  width: 100px;
-  height: 100px;
-  background-color: #c4c4c4;
-  overflow: hidden;
-  border-radius: 4px;
-  display: block;
-}
-
 .person-image {
-  width: 100px;
-  height: 100px;
+  width: 96px;
+  height: 96px;
   background-color: #c4c4c4;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
   display: block;
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
 .info-container {
-  width: 70%;
+  width: calc(100% - 121px);
 }
 
 .name {
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   color: var(--color-text);
   font-size: 16px;
   font-weight: bold;
-  font-family: "Inter", system-ui, -apple-system;
+  font-family: "Helvetica";
 }
 
 .description {
   margin: 0;
-  color: #707070;
+  color: #666;
   font-size: 14px;
-  font-family: "Inter", system-ui, -apple-system;
+  font-family: "Helvetica";
   line-height: 1.5;
 }
