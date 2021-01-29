@@ -2,6 +2,7 @@ html {
   --color-primary: #102261;
   --color-text: #333333;
   --color-border: #33dbdb;
+  --color-text-input: #393939;
 }
 
 body {
@@ -77,7 +78,7 @@ body {
   width: calc(100% - 30px);
   font-size: 14px;
   font-family: "Helvetica";
-  color: "#39393";
+  color: var(--color-text-input);
   height: 40px;
   margin-bottom: 30px;
 }
@@ -89,7 +90,7 @@ body {
 }
 
 .search-input::placeholder {
-  color: "#39393";
+  color: var(--color-text-input);
 }
 
 .people-list {
