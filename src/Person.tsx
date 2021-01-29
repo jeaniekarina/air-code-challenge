@@ -6,7 +6,7 @@ type Props = {
 
 export const Person = ({ person }: Props) => {
   return (
-    <li className="person">
+    <li className="person" aria-label="Person">
       <img
         src={person.avatar}
         alt={`A headshot of ${person.name}`}

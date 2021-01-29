@@ -1,9 +1,19 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders all 1000 people when page loads", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const people = screen.getAllByLabelText("Person");
+  expect(people.length).toEqual(1000);
+});
+
+test("filters results when searching for Cullingford", () => {
+  render(<App />);
+  const searchInput = screen.getByLabelText("Person Search Input");
+  fireEvent.change(searchInput, { target: { value: "Cullingford" } });
+  const people = screen.getAllByLabelText("Person");
+  const name = screen.getByText("Dyanna Cullingford");
+  expect(name).toBeInTheDocument();
+  expect(people.length).toEqual(1);
 });

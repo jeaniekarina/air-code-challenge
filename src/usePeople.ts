@@ -14,7 +14,7 @@ type Props = {
   searchTerm: string;
 };
 
-let searchEngine = new Fuse<Person>(people, { keys: ["name"] });
+let searchEngine = new Fuse<Person>(people, { keys: ["name"], threshold: 0.2 });
 
 export const usePeople = ({ searchTerm }: Props) => {
   let [results, setResults] = useState(searchEngine.search(searchTerm));
