@@ -14,7 +14,7 @@ export const Person = ({ person }: Props) => {
       />
 
       <div className="info-container">
-        <h3 className="name">{person.name}</h3>
+        <h2 className="name">{person.name}</h2>
         <p className="description">{person.description}</p>
       </div>
     </li>
