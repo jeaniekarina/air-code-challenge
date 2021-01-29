@@ -1,0 +1,124 @@
+html {
+  --color-primary: #142a72;
+  --color-text: #333333;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  min-width: 0px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 1224px;
+}
+
+.wrapper {
+  min-width: 0px;
+  margin: 50px auto 0px;
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  max-width: 700px;
+}
+
+.title {
+  font-family: Gelica, Georgia, serif;
+  font-feature-settings: "salt", "ss01";
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.44px;
+  line-height: 1.16;
+  color: var(--color-primary);
+}
+
+@media only screen and (min-width: 780px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+.text {
+  margin: 0px;
+  font-family: "Inter", system-ui, -apple-system;
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 27px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 780px) {
+  .text {
+    font-size: 18px;
+  }
+}
+
+.search-input {
+  padding: 10px 15px;
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 4px;
+  width: calc(100% - 30px);
+  font-size: 16px;
+  font-family: "Inter", system-ui, -apple-system;
+  color: var(--color-text);
+}
+
+.people-list {
+  padding: 0;
+  margin: 40px 0 0 0;
+  list-style: none;
+}
+
+.person {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.person:first-child {
+  margin-top: 0;
+}
+
+.person-image-wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: #c4c4c4;
+  overflow: hidden;
+  border-radius: 4px;
+  display: block;
+}
+
+.person-image {
+  width: 100px;
+  height: 100px;
+  background-color: #c4c4c4;
+  overflow: hidden;
+  border-radius: 4px;
+  display: block;
+  margin-right: 20px;
+}
+
+.info-container {
+  width: 70%;
+}
+
+.name {
+  margin: 0 0 10px 0;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Inter", system-ui, -apple-system;
+}
+
+.description {
+  margin: 0;
+  color: #707070;
+  font-size: 14px;
+  font-family: "Inter", system-ui, -apple-system;
+  line-height: 1.5;
+}
