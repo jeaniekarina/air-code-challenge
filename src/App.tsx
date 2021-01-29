@@ -3,11 +3,12 @@ import { Header } from "Header";
 import { SearchInput } from "SearchInput";
 import { useState } from "react";
 import { Person } from "Person";
+import { usePeople } from "./usePeople";
 
 function App() {
-  let [value, setValue] = useState("");
+  let [searchTerm, setSearchTerm] = useState("");
+  let people = usePeople({ searchTerm });
 
-  console.log(value);
   return (
     <div className="App">
       <Header />
@@ -18,26 +19,17 @@ function App() {
           come to the right place! Just type the name of the person you are
           looking for below into the search box!
         </p>
-        <SearchInput name="searchInput" value={value} handleChange={setValue} />
+        <SearchInput
+          name="searchInput"
+          value={searchTerm}
+          handleChange={setSearchTerm}
+        />
 
         <div className="list-container">
           <ul className="people-list">
-            <Person
-              id="1"
-              avatar={
-                "https://robohash.org/rerumliberoamet.png?size=200x200&set=set1"
-              }
-              name="Dyanna Cullingford"
-              description="Nondisplaced fracture of lower epiphysis (separation) of left femur, initial encounter for closed fracture"
-            />
-            <Person
-              id="1"
-              avatar={
-                "https://robohash.org/rerumliberoamet.png?size=200x200&set=set1"
-              }
-              name="Dyanna Cullingford"
-              description="Nondisplaced fracture of lower epiphysis (separation) of left femur, initial encounter for closed fracture"
-            />
+            {people.map((person) => (
+              <Person key={person.id} person={person} />
+            ))}
           </ul>
         </div>
       </div>
